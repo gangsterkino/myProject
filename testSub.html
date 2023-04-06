@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>展示三张图片</title>
+    <style>
+      /* 将图片居中 */
+      body{
+      background-color: rgba(10,10, 20, .8);
+      }
+      .box{
+        border-radius: 3px;
+        width:1000px;
+        display: flex;
+        margin-top: 60px;
+        background-color: rgba(250, 250, 250, .88);
+        height: 100%;
+        margin-left: 120px;
+        box-shadow: 2px 2px 15px rgba(25, 0, 0, .8);
+
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      
+      /* 调整图片之间的间距 */
+      .image {
+        margin: 10px;
+      }
+      
+      /* 图片样式 */
+      .image img {
+        width: 300px;
+        height: 270px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+      .main img{
+            width: 300px;
+        height: 270px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+
+      }
+      
+      .image img:hover {
+        transform: scale(1.1);
+      }
+    
+      
+      .caption {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 5px;
+        text-align: center;
+      }
+      
+      .caption1 {
+        color: red;
+      }
+      
+      .caption2 {
+        color: blue;
+      }
+      
+      .caption3 {
+        color: green;
+      }
+      
+      .caption4 {
+        color: purple;
+      }
+      
+      .text-section {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+      
+      .text-section p {
+        font-size: 18px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="container">
+        <div class="image">
+          <img src="test2.jpg" alt="第一张图片">
+          <div class="caption caption1">语义分割</div>
+          
+        </div>
+        <div class="image">
+          <img src="test3.png" alt="第二张图片">
+          <div class="caption caption2">可视化分析</div>
+         
+        </div>
+        <div class="image">
+          <img src="test4.png" alt="第四张图片">
+          <div class="caption caption3">shar可解释性</div>
+          
+        </div>
+        <div class="main">
+          <img  src="test1.jpg" alt="第三张图片" >
+          <div class="caption caption4">病状图片</div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </body>
+
+</html>
+
