@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>登录注册</title>
+</head>
+<body>
+	<a href="#">我是患者</a>
+	<a href="#">我是医生</a>
+	  <form action="submit.php" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+      <label for="gender">Gender:</label>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label><br><br>
+      <input type="submit" value="Submit">
+      	<input type="hidden" id="username" name="username">
+
+    </form>
+
+</table>
+
+<h>医生登入注册</h>
+<h>患者登入注册</h>
+<script>
+const username = document.getElementById('username').value;
+
+const loginLink = document.getElementById('login-link');
+const href = loginLink.getAttribute('href');
+loginLink.setAttribute('href', href + '?username=' + encodeURIComponent(username));
+</script>
+
+</body>
+
+</html>
