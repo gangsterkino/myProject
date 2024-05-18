@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>病症图片库</title>
+  <link rel="stylesheet"  href="upload.css">
+
+</head>
+<body>
+  <!-- 导航栏 -->
+
+  <nav class="nav1">
+    <div class="user">
+      <img src="sebastiano.jpg" alt=" e"> 
+    </div>
+    <ul>
+      <li><a href="analyse.html">More</a></li>
+      <li><a href="index.html">Home</a></li>
+
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+  <div class="box">
+  <!-- 导航栏 -->
+  <div class="navbar">
+   
+  <a href="data.html">全部数据集</a>
+      <a href="introduce.html">疾病概述（预测时的跳转）</a>
+    <a href="cards.html">卡片组（点击跳转下载界面）</a>
+    <a href="upload.html"  style="background-color: white;  color: white;
+  text-shadow: 1px 1px 5px darkblue;">批量上传数据集</a>
+   
+    <!-- 更多病症目录可以在这里添加 -->
+  </div>
+<div class="box2">
+   <div class="upload-container">
+    <label for="file-upload" class="upload-button">
+      Choose Folder
+    </label>
+    <input id="file-upload" type="file" webkitdirectory multiple>
+    <div class="upload-progress"></div>
+  </div>
+  
+</div>
+
+</div>
+<script>
+const uploadButton = document.querySelector('.upload-button');
+const fileInput = document.querySelector('#file-upload');
+const uploadProgress = document.querySelector('.upload-progress');
+
+uploadButton.addEventListener('click', () => {
+  fileInput.click();
+});
+
+fileInput.addEventListener('change', (event) => {
+  const files = event.target.files;
+  if (files.length > 0) {
+    const file = files[0];
+    const xhr = new XMLHttpRequest();
+    xhr.upload.addEventListener('progress', (event) => {
+      const percent = (event.loaded / event.total) * 100;
+      uploadProgress.style.width = `${percent}%`;
+    });
+    xhr.open('POST', '/upload');
+    xhr.send(file);
+  }
+});
+</script>
+</body>
+</html>

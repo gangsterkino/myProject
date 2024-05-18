@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+ body {
+
+                background-size: cover;
+
+  background-attachment: fixed;
+      }
+          /* 导航栏样式 */
+            .user {
+  display: flex;
+  align-items: center;
+}
+
+.user img {
+  margin-left: 10px;
+  box-shadow: 1px 1px 10px skyblue;
+border-radius: 50px;
+  max-height: 50px;
+  margin-right: 1rem;
+}
+    nav {
+      background-color: white;
+      color: #fff;
+      padding: 10px;
+      font-size: 20px;
+      display: flex;
+      width: 100%;
+      box-shadow: 1px 1px 10px #eee;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 30px;
+    }
+
+    nav a {
+        color:black;
+  text-decoration: none;
+    }
+    nav a:hover{
+  color: white;
+  text-shadow: 1px 1px 5px darkblue;
+}
+
+
+      .form-container {
+
+        margin: auto;
+
+    background-image: url("cool-background.svg");
+    background-repeat: no-repeat;
+
+      width: 65%;
+        padding: 20px;
+        box-shadow: 1px 1px 10px #eee;
+        border-radius: 3px;
+
+      }
+      .diagnose{
+        border-radius: 10px;
+        text-decoration: none;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 10px;
+        border-radius: 20px;
+
+      }
+      input[type="text"],
+      select {
+        width: 40%;
+        text-align: center;
+        padding: 12px 20px;
+        margin: 8px 0;
+        border-radius: 10px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 14px;
+      }
+      input[type="submit"] {
+      background-color: white;
+        padding: 12px 20px;
+        height: 40px;
+        width: 80px;
+        border: 2px  solid darkblue;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+background-color: darkblue;
+color: white;
+      }

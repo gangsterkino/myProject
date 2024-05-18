@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+	body {
+		
+			margin: 0;
+			padding: 0;
+			background-repeat: no-repeat;
+	     
+		}
+	.user {
+  display: flex;
+  align-items: center;
+}
+
+.user img {
+	margin-left: 10px;
+	box-shadow: 1px 1px 10px skyblue;
+border-radius: 50px;
+  max-height: 50px;
+  margin-right: 1rem;
+}
+
+		/* 导航栏样式 */
+		nav {
+			background-color: white;
+			color: #fff;
+			padding: 10px;
+			font-size: 20px;
+			display: flex;
+			width: 100%;
+			box-shadow: 1px 1px 10px #eee;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		nav h1 {
+			margin: 0;
+			font-size: 24px;
+			font-weight: bold;
+			letter-spacing: 2px;
+		}
+
+		nav ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+		}
+
+		nav li {
+			margin-right: 30px;
+		}
+
+		nav a {
+				color:black;
+	text-decoration: none;
+		}
+		nav a:hover{
+	color: white;
+	text-shadow: 1px 1px 5px darkblue;
+}
+		/* 侧边栏样式 */
+		.sidebar {
+			background-color: rgb(244, 244, 244);
+            transition: all.2s ease-out;
+			width: 15%;
+			height: 100vh;
+			position: absolute;
+			margin-top:0px;
+			left: 0;
+			padding: 20px;
+		}
+		.sidebar h2 {
+			margin-top: 0;
+
+			font-size: 17px;
+			font-weight: bold;
+						letter-spacing: 1px;
+
+		}
+
+		.sidebar ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			margin-top: 20px;
+		}
+
+		.sidebar li {
+			margin-bottom: 10px;
+		}
+		.sidebar a {
+			color: #333;
+			margin: 10px;			letter-spacing: 1px;
+
+			height: 60px;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		 .sidebar a:hover {
+
+      background:#eee;
+      text-shadow:1px 1px 8px darkblue;
+      width: 100px;
+      border-radius: 5px;
+      color: white;
+    }
+    .sidebar li{
+    	color: blue;
+    }
+	
+		/* 卡片组样式 */
+		.card-container {
+				background-image: url("cool-background.svg");
+				background-repeat: no-repeat;
+				position: absolute;
+			margin-left: 25%;
+			padding: 20px;
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.card {
+			width: 40%;
+			height: 280px;
+			background-color: #fff;
+			box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+			margin-top: 10px;
+			left: 10px;
+			margin: 25px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			border-radius: 15px;
+			position: relative;
+		}
+
+		.card img {
+			width: 100px;
+			height: 100px;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+
+		.card h3 {
+			margin: 0;
+			font-size: 20px;
+			font-weight: bold;
+			color: #333;
+			padding: 20px;
+			background-color: #fff;
+			position: relative;
+			z-index: 1;
+		}
+
+		.card p {
+			margin: 0;
+			font-size: 16px;
+			color: #555;
+			padding: 20px;
+			background-color: #fff
+		position: relative;
+		z-index: 1;
+	}
+	.card:hover{
+		box-shadow: 1px 1px 20px gainsboro;
+	
+	}

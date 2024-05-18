@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>再分析标记页面</title>
+	<link href='https://unpkg.com/css.gg@2.0.0/icons/css/add-r.css' rel='stylesheet'>
+	<link href='https://unpkg.com/css.gg@2.0.0/icons/css/zoom-out.css' rel='stylesheet'>
+	<link href='https://unpkg.com/css.gg@2.0.0/icons/css/color-picker.css' rel='stylesheet'>
+	<link href='https://unpkg.com/css.gg@2.0.0/icons/css/pen.css' rel='stylesheet'>
+	<link href='https://unpkg.com/css.gg@2.0.0/icons/css/arrow-top-left.css' rel='stylesheet'>
+	<link href='https://unpkg.com/css.gg@2.0.0/icons/css/eye-alt.css' rel='stylesheet'>
+	<link href='https://unpkg.com/css.gg@2.0.0/icons/css/erase.css' rel='stylesheet'>
+	<link href='https://unpkg.com/css.gg@2.0.0/icons/css/file-add.css' rel='stylesheet'>
+	<link href='https://unpkg.com/css.gg@2.0.0/icons/css/zoom-in.css' rel='stylesheet'>
+<link rel="stylesheet" type="text/css" href="generate.css">
+
+</head>
+<body>
+		<!-- 创建一个顶部导航栏 -->
+ <!-- 导航栏 -->
+
+  <nav class="nav1">
+    <button><a href="diognise.html">save</a></button>
+    <ul>
+      <li><a href="analyse.html">More</a></li>
+      <li><a href="index.html">Home</a></li>
+
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+  <div class="box">
+
+		<div class="left">
+			<img src="p1.webp">
+			<p>visualize</p>
+			<img  src="p2.webp">
+			<p>visualize</p>
+		
+			<table>
+				 <tr>
+				    <th>Color</th>	  
+				    <th>Percent(%)</th>
+				 </tr>
+				 <tr>
+				    <td><div class="color red" onclick="setColor('red')"></div></td>
+				    <td>0.000%</td>
+
+				 </tr>
+				 <tr>
+				    <td><div class="color green" onclick="setColor('green')"></div></td>
+				    <td>0.000%</td>
+				 </tr>
+				 <tr>
+				    <td><div class="color blue" onclick="setColor('blue')"></div></td>
+				    <td>12.716%</td>
+				 </tr>
+				  <tr>
+				    <td><div class="color yellow" onclick="setColor('yellow')"></div></td>
+				    <td>1.027%</td>
+				 </tr>
+				 <tr>
+				    <td><div class="color purple" onclick="setColor('purple')"></div></td>
+				    <td>7.645%</td>
+				 </tr>
+			</table>
+			
+		</div>
+	<div class="right">
+  <div class="image_box">
+    <img id="main-image" src="v1.jpeg">
+  </div>
+  <div class="icon-row">
+<i class="gg-pen"></i>
+<i class="gg-color-picker"></i>
+<i class="gg-arrow-top-left"></i>
+<i class="gg-erase"></i>
+<div class="icon-row2">
+<i class="gg-zoom-out"></i>
+<i class="gg-zoom-in"></i>
+<i class="gg-file-add"></i>
+<i class="gg-eye-alt"></i>
+</div>
+  </div>
+  <div class="special-btn">
+    <button onclick="changeImage()">mask</button>
+  </div>
+</div>
+	<div class="sidebar">
+				
+				<img src="back.jpg">
+				<img src="back.jpg">
+				<img src="back.jpg">
+					<img src="back.jpg">
+				<img src="back.jpg">
+				<img src="back.jpg">
+				<img src="blue.jpeg">
+				<img src="red.jpeg">
+				<img src="green.jpeg">
+				<img src="dd.png">		
+		</div>	
+	</div>
+	<script>
+		function setColor(color) {
+			document.getElementById('main-image').style.backgroundColor = color;}
+		function changeImage() {
+			document.getElementById("main-image").src = "v2.jpeg";
+		}
+	</script>
+</body>
+</html>

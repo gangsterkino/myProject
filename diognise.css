@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+ body {
+ background-image:url("cool-background.svg") ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+/* 导航栏样式 */
+    nav {
+      background-color: white;
+      color: #fff;
+      padding: 10px;
+      font-size: 20px;
+      display: flex;
+      width: 100%;
+      box-shadow: 1px 1px 10px #eee;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 30px;
+    }
+
+    nav a {
+      color:black;
+  text-decoration: none;
+    }
+  
+.box
+{ left: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+h1{
+  margin-left: 40px;
+    margin-left: 10px;
+}
+
+.left, .middle{
+  height: 100vh;
+  display: inline-block;
+  vertical-align: top;
+
+}
+.main_img{
+  width: 80%;
+  height: auto;
+}
+.right,.middle{
+  height: 100vh;
+  display: inline-block;
+
+  vertical-align: top;
+}
+
+.left {
+  width: 29%;
+  background-color: #f2f2f2;
+}
+
+.middle {
+  width: 36%;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+
+.right {
+  width: 34%;
+  background-color: #f2f2f2;
+}
+
+.file-icon{
+
+  width: 100px;
+}
+
+/*预测条*/
+.predict1{
+  margin-left: 10px;
+  width: 90%;
+  font-size: 10px;
+  margin-top: 20px;
+  height: 8px;
+  background-color: white;
+  border-radius:20px ;
+}
+.possiblity1{
+  line-height: 10px;
+  background-color:blueviolet;
+  border-radius: 20px;
+  color: white;
+  width: 90%;
+  height: 8px;
+  text-align: center;
+}
+
+
+.possiblity2{
+  line-height: 10px;
+  background-color:blue;
+  border-radius: 20px;
+  color: white;
+  width: 30%;
+  height: 8px;
+  text-align: center;
+
+}
+.picture-container {
+  background-color: #F2F2F2;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  justify-content: space-between;
+}
+
+.left img {
+  align-self: center;
+  width: 100%;
+  height: auto;
+}
+.middle img {
+  margin-top: 100px;
+  align-self: center;
+  width: 90%;
+  height: auto;
+}
+
+button {
+  margin-bottom: 100px;
+  padding: 10px 20px;
+  align-content: center;
+
+  margin-top: 20px;
+  cursor: pointer;
+}
+ button {
+  margin: 20px;
+ background-color: transparent;
+  cursor: pointer;
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 8px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid #2c0b8e;
+  color: #2c0b8e;
+}
+ button:hover {
+  color: #fff;
+}
+ button:hover:after {
+  width: 100%;
+}
+ button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #2c0b8e;
+}
+
+.gg-folder{
+  margin-left: 20px;
+}
+
+h1{
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+p{
+  font-size: 13px;
+}
+.left p{
+  margin-top: 40px;
+}
+.picture-container a{
+  margin: 20px;
+    text-decoration: none;
+  background-color:#ddd ;
+  margin-left: 20px;
+  font-size: 14px;
+  color: black;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user img {
+  margin-left: 10px;
+  box-shadow: 1px 1px 10px skyblue;
+border-radius: 50px;
+  max-height: 50px;
+  margin-right: 1rem;
+}
+
+
+.right img {
+   align-self: center;
+  width: 100%;
+    height: 40%;  
+}
+a {
+    text-decoration:none ;
+  color: darkblue;
+}
+
+a:hover{
+  color: white;
+}
+nav a:hover{
+  text-shadow: 1px 1px 8px darkblue;
+  color: white;
+}
+table {
+  margin-top: 20px;
+      width: 100%;
+      height: 50%;
+      font-size: 13px;
+      border-collapse: collapse;
+    }
+  
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }

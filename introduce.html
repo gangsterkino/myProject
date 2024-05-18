@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>疾病预览</title>
+    <link rel="stylesheet" href="introduce.css">
+
+
+</head>
+<body>
+     <!-- 导航栏 -->
+
+  <nav class="nav1">
+ 
+    <h1>Example Website</h1>
+    <ul>
+      <li><a href="analyse.html">More</a></li>
+      <li><a href="index.html">Home</a></li>
+
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+  <div class="box">
+  <!-- 导航栏 -->
+  <!-- 导航栏 -->
+  <div class="navbar">
+   
+    <a href="data.html">全部数据集</a>
+      <a href="introduce.html"  style="background-color: white;  color: white;
+  text-shadow: 1px 1px 5px darkblue;">疾病概述（预测时的跳转）</a>
+    <a href="cards.html">卡片组（点击跳转下载界面）</a>
+    <a href="upload.html">批量上传数据集</a>
+   
+    <!-- 更多病症目录可以在这里添加 -->
+  </div>
+
+
+
+
+<div class="container">
+    <img class="image" src="ISIC_0000007.jpg" alt="Example Image">
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus arcu eu tortor efficitur <span class="mark">Nam vitae nulla non nisi viverra consectetur.</span> Praesent eu nisi purus. Vestibulum gravida sem in dui placerat dapibus.</p>
+    </div>
+  
+    <img class="image" src="ISIC_0000013.jpg" alt="Example Image">
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.  in aliquam turpis ultrices. <span class="mark">Nam vitae nulla non nisi viverra consectetur.</span> Praesent eu nisi purus. Vestibulum gravida sem in dui placerat dapibus.</p>
+    </div>
+  </div>
+
+<div class="container">
+    <img class="image" src="ISIC_0000035_downsampled.jpg" alt="Example Image">
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. leo. <span class="mark">Nam vitae nulla non nisi viverra consectetur.</span> Praesent eu nisi purus. Vestibulum gravida sem in dui placerat dapibus.</p>
+    </div>
+  
+    <img class="image" src="ISIC_0000013.jpg" alt="Example Image">
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus arcu eu tortor efficitur, in aliquam turpis ultrices. <span class="mark">Nam vitae nulla non nisi viverra consectetur.</span> Praesent eu nisi purus. Vestibulum gravida sem in dui placerat dapibus.</p>
+    </div>
+  </div>
+
+<div class="container">
+    <img class="image" src="ISIC_0000035_downsampled.jpg" alt="Example Image">
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus arcu eu tortor efficitur, in aliquam turpis ultrices. Proin ac libero leo. <span class="mark">Nam vitae nulla non nisi viverra consectetur.</span> Praesent eu nisi purus.</p>
+    </div>
+  
+
+    <img class="image" src="ISIC_0000013.jpg" alt="Example Image">
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus arcu eu tortor efficitur, in aliquam turpis ultrices. <span class="mark">Nam vitae nulla non nisi viverra consectetur.</span> Praesent eu nisi purus. Vestibulum gravida sem in dui placerat dapibus.</p>
+    </div>
+  </div>
+
+<div class="container">
+    <img class="image" src="ISIC_0000035_downsampled.jpg" alt="Example Image">
+    <div class="text">
+      <p> Proin ac libero leo. <span class="mark">Nam vitae nulla non nisi viverra consectetur.</span> Praesent eu nisi purus. Vestibulum gravida sem in dui placerat dapibus.</p>
+    </div>
+  
+
+    <img class="image" src="ISIC_0000035_downsampled.jpg" alt="Example Image">
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus arcu eu tortor efficitur, in aliquam turpis ultrices. <span class="mark">Nam vitae nulla non nisi viverra consectetur.</span> Praesent eu nisi purus. Vestibulum gravida sem in dui placerat dapibus.</p>
+    </div>
+  </div>
+
+<div class="container">
+    <img class="image" src="ISIC_0000013.jpg" alt="Example Image">
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dapibus arcu eu tortor efficitur, in aliquam turpis ultrices. Proin ac libero leo. <span class="mark">Nam vitae nulla non nisi viverra consectetur.</span> Praesent eu nisi purus. Vestibulum gravida sem in dui placerat dapibus.</p>
+    </div>
+
+    <img class="image" src="ISIC_0000013.jpg" alt="Example Image">
+    <div class="text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <span class="mark">Nam vitae nulla non nisi viverra consectetur.</span> Praesent eu nisi purus. Vestibulum gravida sem in dui placerat dapibus.</p>
+    </div>
+  </div>
+ <!-- 页码栏 -->
+  <div class="pagination">
+    <button class="prev-page" onclick="prevPage()">&laquo; 上一页</button>
+    <button class="next-page" onclick="nextPage()">下一页 &raquo;</button>
+  </div>
+
+  <script>
+    // 获取所有疾病项目
+    const diseaseItems = document.querySelectorAll(".container");
+    // 每页显示的项目数量
+    const itemsPerPage = 4;
+    // 当前页码
+    let currentPage = 1;
+    // 总页码数
+    const totalPages = Math.ceil(diseaseItems.length / itemsPerPage);
+
+    // 隐藏所有项目
+    function hideItems() {
+      diseaseItems.forEach((item) => {
+        item.style.display = "none";
+      });
+    }
+
+    // 显示指定页码的项目
+    function showItems(page) {
+      // 隐藏所有项目
+      hideItems();
+      // 计算起始和结束索引
+      const startIndex = (page - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+      // 显示指定索引范围内的项目
+      for (let i = startIndex; i < endIndex && i < diseaseItems.length; i++) {
+        diseaseItems[i].style.display = "flex";
+      }
+    }
+
+    // 显示初始页码
+    showItems(currentPage);
+
+    // 切换到上一页
+    function prevPage() {
+      if (currentPage > 1) {
+        currentPage--;
+        showItems(currentPage);
+      }
+    }
+
+    // 切换到下一页
+    function nextPage() {
+      if (currentPage < totalPages) {
+        currentPage++;
+        showItems(currentPage);
+      }
+    }
+  </script>
+
+</body>
+</html>

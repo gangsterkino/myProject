@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>病症图片库</title>
+  <link rel="stylesheet" href="data.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+
+  <nav class="nav1">
+  
+    <h1>Example Website</h1>
+    <ul>
+      <li><a href="analyse.html">More</a></li>
+      <li><a href="index.html">Home</a></li>
+
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+  <div class="box">
+  <!-- 导航栏 -->
+  <!-- 导航栏 -->
+  <div class="navbar">
+   
+    <a href="data.html" style="background-color: white;">全部数据集</a>
+      <a href="introduce.html">疾病概述（预测时的跳转）</a>
+    <a href="cards.html">卡片组（点击跳转下载界面）</a>
+    <a href="upload.html">批量上传数据集</a>
+   
+    <!-- 更多病症目录可以在这里添加 -->
+  </div>
+
+  <!-- 病症图片目录 -->
+  <div class="disease">
+    <div class="disease-item">
+      <img src="ISIC_0000007.jpg" alt="黑素瘤">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000013.jpg" alt="白癜风">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000008.jpg" alt="1">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000009.jpg" alt="2">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000011.jpg" alt="1">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000017_downsampled.jpg" alt="2">
+    </div><div class="disease-item">
+      <img src="ISIC_0000030_downsampled.jpg" alt="1">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000035_downsampled.jpg" alt="2">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000036_downsampled.jpg" alt="1">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000029_downsampled.jpg" alt="2">
+    </div>
+      <div class="disease-item">
+      <img src="ISIC_0000031_downsampled.jpg" alt="1">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000032_downsampled.jpg" alt="2">
+    </div>
+      <div class="disease-item">
+      <img src="ISIC_0000037_downsampled.jpg" alt="1">
+    </div>
+    <div class="disease-item">
+      <img src="samt.jpg" alt="2">
+    </div>
+    <!-- 更多病症目录可以在这里添加 -->
+
+
+
+
+
+    <div class="disease-item">
+      <img src="ISIC_0000037_downsampled.jpg" alt="黑素瘤">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000044_downsampled.jpg" alt="白癜风">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000052_downsampled.jpg" alt="1">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000057_downsampled.jpg" alt="2">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000066.jpg" alt="1">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000046_downsampled.jpg" alt="2">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000063_downsampled.jpg" alt="1">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000060_downsampled.jpg" alt="2">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000062_downsampled.jpg" alt="1">
+    </div>
+    <div class="disease-item">
+      <img src="ISIC_0000065_downsampled.jpg" alt="2">
+    </div>
+    <!-- 添加更多图片可以在这里继续添加 -->
+  </div>
+  <!-- 页码栏 -->
+  <div class="pagination">
+    <button class="prev-page" onclick="prevPage()">&laquo; 上一页</button>
+    <button class="next-page" onclick="nextPage()">下一页 &raquo;</button>
+  </div>
+
+  <script>
+    // 获取所有疾病项目
+    const diseaseItems = document.querySelectorAll(".disease-item");
+    // 每页显示的项目数量
+    const itemsPerPage = 12;
+    // 当前页码
+    let currentPage = 1;
+    // 总页码数
+    const totalPages = Math.ceil(diseaseItems.length / itemsPerPage);
+
+    // 隐藏所有项目
+    function hideItems() {
+      diseaseItems.forEach((item) => {
+        item.style.display = "none";
+      });
+    }
+
+    // 显示指定页码的项目
+    function showItems(page) {
+      // 隐藏所有项目
+      hideItems();
+      // 计算起始和结束索引
+      const startIndex = (page - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+      // 显示指定索引范围内的项目
+      for (let i = startIndex; i < endIndex && i < diseaseItems.length; i++) {
+        diseaseItems[i].style.display = "flex";
+      }
+    }
+
+    // 显示初始页码
+    showItems(currentPage);
+
+    // 切换到上一页
+    function prevPage() {
+      if (currentPage > 1) {
+        currentPage--;
+        showItems(currentPage);
+      }
+    }
+
+    // 切换到下一页
+    function nextPage() {
+      if (currentPage < totalPages) {
+        currentPage++;
+        showItems(currentPage);
+      }
+    }
+  </script>
+</body>
+</html>
+
+

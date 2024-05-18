@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+body {
+  background-image: url("cool-background.svg");
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.box{
+  height: 100vh;
+}
+
+/* 导航栏样式 */
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user img {
+  margin-left: 10px;
+  box-shadow: 1px 1px 10px skyblue;
+  border-radius: 50px;
+  max-height: 50px;
+  margin-right: 1rem;
+}
+
+.nav1 {
+  background-color: white;
+  color: #000;
+  padding: 10px;
+  font-size: 20px;
+  display: flex;
+  width: 100%;
+  box-shadow: 1px 1px 10px #eee;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav1 h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav1 ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.nav1 li {
+  margin-right: 30px;
+}
+
+.nav1 a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav1 a:hover {
+  color: white;
+  text-shadow: 1px 1px 5px darkblue;
+}
+
+.box {
+  width: 85%;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.6);
+  margin-left: 8%;
+  margin-right: 8%;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.38);
+  overflow: hidden;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.6);
+}
+
+.navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* 病症目录样式 */
+.disease {
+  margin: 30px;
+  margin-left: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.disease-item {
+  margin: 10px;
+  width: 220px;
+  height: 230px;
+  display: flex;
+  border: 1px solid #ddd;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+ .upload-container {
+  position: relative;
+  width: 300px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+
+
+.upload-button {
+ background-color: transparent;
+  cursor: pointer;
+  min-width: 50px;
+  height: 30px;
+  color: #fff;
+  left: 20px;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 8px;
+  margin: 20px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  border: 2px solid #2c0b8e;
+  color: #2c0b8e;
+}
+.upload-button:hover {
+  color: #fff;
+}
+.upload-button:hover:after {
+  width: 100%;
+}
+.upload-button:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s ease;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #2c0b8e;
+}
+
+
+
+
+input[type=file] {
+  display: none;
+}
+
+.upload-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+

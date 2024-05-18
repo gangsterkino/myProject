@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+
+    <title>信息登记</title>
+    <link rel="stylesheet" href="fun1.css">
+    
+
+  </head>
+  <body>
+    <!-- 导航栏 -->
+
+  <nav>
+    <div class="user">
+      <img src="sebastiano.jpg" alt=" e"> 
+    </div>
+    <h1>Example Website</h1>
+    <ul>
+      <li><a href="analyse.html">More</a></li>
+      <li><a href="index.html">Home</a></li>
+
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+  <div class="back">
+    <div class="form-container">
+      <h2>填写患者信息</h2>
+      <form>
+        <label for="id">姓名: </label>
+        <input type="text" id="id" name="id"  />
+
+        <label for="age">年龄: </label>
+        <input type="text" id="age" name="age" />
+
+        <label for="gender">性别: </label>
+        <select id="gender" name="gender">
+          <option value="male">男</option>
+          <option value="female">女</option>
+        </select>
+
+        <label for="body-part">大致部位: </label>
+        <select id="body-part" name="body-part">
+          <option value="face">面部</option>
+          <option value="scalp">头皮</option>
+          <option value="neck">颈部</option>
+          <option value="chest">前胸</option>
+          <option value="back">后背</option>
+          <option value="upper-limb">上肢</option>
+          <option value="lower-limb">下肢</option>
+          <option value="palm-sole">掌跖</option>
+          <option value="perineum">会阴</option>
+        </select>
+
+        <label for="duration">病程: </label>
+        <input type="text" id="duration" name="duration" />
+
+        <label for="malignancy">良恶性: </label>
+        <select id="malignancy" name="malignancy">
+          <option value="benign">良性</option>
+          <option value="malignant">恶性</option>
+          <option value="unknown">未知</option>
+        </select>
+
+        <label for="diagnosis-method">确诊方式: </label>
+        <select id="diagnosis-method" name="diagnosis-method">
+          <option value="pathologic-diagnosis">病理诊断</option>
+          <option value="expert-follow-up">专家随访</option>
+<option value="skin-ct">皮肤CT</option>
+        </select>
+     
+        <div class="form-field">
+    <label for="size">大小: </label>
+    <input type="text" id="size" name="size" placeholder="x.xcm × x.xcm">
+  </div>
+
+  <div class="form-field">
+    <label id="diagnose" for="diagnosis">诊断: </label>
+    <textarea id="diagnosis" name="diagnosis"></textarea>
+  </div>
+
+  <div class="form-field">
+    <label for="tumor-history">肿瘤史: </label>
+    <select id="tumor-history" name="tumor-history">
+      <option value="yes">有</option>
+      <option value="no">无</option>
+      <option value="unknown">不详</option>
+    </select>
+  </div>
+
+  <div class="form-field">
+    <label for="pain-level">疼痛: </label>
+    <select id="pain-level" name="pain-level">
+      <option value="very-painful">很疼</option>
+      <option value="painful">疼</option>
+      <option value="less-painful">较疼</option>
+      <option value="no-pain">不疼</option>
+    </select>
+  </div>
+
+  <div class="form-field">
+    <label for="itch-level">瘙痒: </label>
+    <select id="itch-level" name="itch-level">
+      <option value="often">经常</option>
+      <option value="occasionally">偶尔</option>
+      <option value="never">从不</option>
+    </select>
+  </div>
+
+  <div class="form-field">
+    <label for="past-medication">既往用药: </label>
+    <input type="text" id="past-medication" name="past-medication" placeholder="text、无">
+  </div>
+
+  <div class="form-field">
+    <input type="submit" value="提交">
+  </div>
+</form>
+</div>
+</div>
+
+
+</body>
+</html>

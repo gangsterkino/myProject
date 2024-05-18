@@ -1,0 +1,77 @@
+/* CSS Code */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-card, .register-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 320px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.register-card {
+  transform: translate(-50%, -150%);
+  z-index: -1;
+}
+
+.show-register .login-card {
+  transform: translate(-50%, -150%);
+  z-index: -1;
+}
+
+.show-register .register-card {
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.show-login .login-card {
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+.show-login .register-card {
+  transform: translate(-50%, 150%);
+  z-index: -1;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0077cc;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
